@@ -1,0 +1,23 @@
+﻿@model FizzBuzzMVC.Models.FizzBuzzViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Fizz Buzz Woof</h1>
+    
+</div>
+<div class="fizz-buzz-woof__results">
+    <h2>Fizz Buzz Results</h2>
+    <div class="amount">Fizz - @Model.FizzAmount</div>
+    <div class="amount">Buzz - @Model.BuzzAmount</div>
+    <div class="amount">Woof - @Model.WoofAmount</div>
+</div>
+<div class="fizz-buzz-woof">
+    @foreach(var number in Model.Numbers)
+    {
+        <div class="fizz-buzz-woof__number">
+            @number
+        </div>
+    }
+</div>
